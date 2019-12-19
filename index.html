@@ -165,28 +165,31 @@
 							<input name="password" type="text" id="conpass" />
 							<span  class="error_msg" id= "cpassword_errormsg"></span> 
 						</div>
-							<div class="dob_fileds selectbox">
+							<div class="dob_fileds selectbox" id = "birthDate">
 								<label>My birthdate is</label>
+								<span  class="error_msg" id= "bday_errormsg"></span> 
 
 								<ul>
 									<li>
-										<select name="month" class="select month">
-											<option value="jan">Jan</option>
-											<option value="feb">Feb</option>
-											<option value="march">March</option>
-											<option value="april">April</option>
-											<option value="may">May</option>
-											<option value="june">June</option>
-											<option value="july">July</option>
-											<option value="aug">Aug</option>
-											<option value="sep">Sep</option>
-											<option value="oct">Oct</option>
-											<option value="nov">Nov</option>
-											<option value="dec">Dec</option>
+										<select name="month" class="select month" id = "bMonth">
+											<option value="-1">Month</option>
+											<option value="0">Jan</option>
+											<option value="1">Feb</option>
+											<option value="2">March</option>
+											<option value="3">April</option>
+											<option value="4">May</option>
+											<option value="5">June</option>
+											<option value="6">July</option>
+											<option value="7">Aug</option>
+											<option value="8">Sep</option>
+											<option value="9">Oct</option>
+											<option value="10">Nov</option>
+											<option value="11">Dec</option>
 										</select>
 									</li>
 									<li>
-										<select name="day" class="select day">
+										<select name="day" class="select day" id = "bDay">
+											<option value="0">Day</option>
 											<option value="1">01</option>
 											<option value="2">02</option>
 											<option value="3">03</option>
@@ -224,8 +227,18 @@
 									</li>
 
 									<li>
-										<select name="year" class="select year">
-											<option value="volvo">Year</option>
+										<select name="year" class="select year" id = "bYear">
+											<option value="0">Year</option>
+											<script type="text/javascript">
+												
+												var dt= new Date();
+																
+												for(var i=1979;i<=dt.getFullYear();i++)
+											 
+												 document.write("<option value='"+i+"'>" + i+"</option> ");
+											 
+											   </script>
+											 
 										</select>
 									</li>
 								</ul>
@@ -234,10 +247,11 @@
 					<li class="fileds">
 						<div class="age_fileds">
 							<label>Age</label>
-							<input name="age" type="text" /> 
+							<input name="age" type="text" id ="age" /> 
 						</div>
 						<div class="gender_fileds">
 							<label>Gender</label>
+							<span  class="error_msg" id= "gender_errormsg"></span> 
 							<ul>
 								<li><input type="radio" class="radio" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
 								<li><input type="radio" class="radio" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
@@ -245,7 +259,7 @@
 						</div>
 					</li>
 					<li>
-						<div class="interest_fileds">
+						<div class="interest_fileds" id ="interest">
 						<label>Interest</label>
 							<ul>
 								<li><input type="checkbox" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
@@ -255,7 +269,8 @@
 						</div>
 						<div class="about_you_fileds">
 						<label>About you</label>
-						<textarea></textarea>
+						<span  class="error_msg" id= "aboutU_errormsg"></span> 
+						<textarea id="aboutU"></textarea>
 						</div>						
 					</li>
 				</ul>
