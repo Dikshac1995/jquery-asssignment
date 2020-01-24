@@ -121,13 +121,13 @@
 			<div class="contect_text">So we can successfully match your details with suitable people, we first need to collect some information about you. Read each question carfully and  select or place a tick in the box for each of your characteristics. Please answer as honestly as you can, otherwise you may be disappointed with your matches and they with you.</div>
 
 			<div class="form_container_block">
-				<form  id="inquiryForm" action="#" >
+				<form  id="inquiryForm panel">
 				<ul>
 					<li class="fileds">
 						<div class="name_fileds">
 							<label>First Name</label>
 							<input name="firstname" type="text" id="fName" /> 
-							<span  class="error_msg" id= "fName_errormsg"></span>
+							<span  class="error_msg" id= "fName_errormsg">this is required</span>
 						</div>
 						<div class="name_fileds">
 							<label>Last Name</label>
@@ -155,14 +155,14 @@
 						</div>
 						<div class="pass_fileds">
 							<label>Password</label>
-							<input name="password" type="text" id="pass" /> 
+							<input name="password" type="Password" id="pass" /> 
 							<span  class="error_msg" id= "password_errormsg"></span>
 						</div>
 					</li>
 					<li class="fileds">
 						<div class="pass_fileds">
 							<label>Confirm Password</label>
-							<input name="password" type="text" id="conpass" />
+							<input name="password" type="password" id="conpass" />
 							<span  class="error_msg" id= "cpassword_errormsg"></span> 
 						</div>
 							<div class="dob_fileds selectbox" id = "birthDate">
@@ -275,10 +275,11 @@
 					</li>
 				</ul>
 				<div class="next_btn_block">
-					<div class="next_btn">
-						<a href="partners_preference_form.html">Proceed to Step 2 <span><img src="images/small_triangle.png" alt="small_triangle"> </span></a>
-					</div>
-				</div>
+					<!-- <div class="next_btn" id ="next_btn"> -->
+						<button id="submitForm" type="submit" class='enableOnInput' >Proceed to Step 2 
+						</button>
+					<!-- </div> -->
+				</div> 
 			</div>
 		</div>
 	</div>	
@@ -471,3 +472,4 @@ Live a life without regrets and take action today!</p>
 <script src="jqueryscript.js"></script>
 </body>
 </html>
+
